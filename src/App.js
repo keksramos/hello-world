@@ -1,3 +1,5 @@
+import React from 'react';
+
 import logo from './flower.svg';
 import './App.css';
 import Box from './Box';
