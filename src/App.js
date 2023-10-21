@@ -30,7 +30,7 @@ function App() {
          <input id="lastNameChangeInput" type="text" placeholder="Last name"/>
          <br></br> 
          <button onClick={(changeName) => setCounter(counter +1)}>Change</button>
-         <p>Times name changed {counter}</p>
+         <p>Times name changed: {counter}</p>
        </header>
      </div>
   )
