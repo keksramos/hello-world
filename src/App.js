@@ -4,7 +4,7 @@ import Box from './Box';
 import { useState } from 'react';
 
 function App() {
-  const [name, setName] = useState('John');
+  const [name, setName] = useState('Jane');
   const [lastName, setLastName] = useState('Doe');
 
   function changeName(){
