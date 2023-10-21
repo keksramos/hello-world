@@ -20,6 +20,12 @@ function App() {
     document.getElementById('lastNameChangeInput').value = ''
   }
 
+  const counterCode = () => {
+    setCounter(counter + 1)
+  }
+
+  // ()=> setCounter(counter +1)
+
   return(
     <div className="App">
        <header className="App-header">
@@ -29,7 +35,10 @@ function App() {
          <br></br>
          <input id="lastNameChangeInput" type="text" placeholder="Last name"/>
          <br></br> 
-         <button onClick={(changeName) => setCounter(counter +1)}>Change</button>
+         <button onClick={event =>{
+          changeName()
+          counterCode()
+         }}>Change</button>
          <p>Times name changed: {counter}</p>
        </header>
      </div>
