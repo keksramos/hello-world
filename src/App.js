@@ -9,6 +9,8 @@ function App() {
   const [name, setName] = useState('Jane');
   const [lastName, setLastName] = useState('Doe');
 
+  const [counter, setCounter] = useState(0)
+
   function changeName(){
     const newName = document.getElementById('nameChangeInput').value
     const newLastName = document.getElementById('lastNameChangeInput').value
@@ -27,7 +29,8 @@ function App() {
          <br></br>
          <input id="lastNameChangeInput" type="text" placeholder="Last name"/>
          <br></br> 
-         <button onClick={changeName}>Change</button>
+         <button onClick={(changeName) => setCounter(counter +1)}>Change</button>
+         <p>Times name changed {counter}</p>
        </header>
      </div>
   )
