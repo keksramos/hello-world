@@ -18,6 +18,7 @@ function App() {
     setLastName(newLastName)
     document.getElementById('nameChangeInput').value = ''
     document.getElementById('lastNameChangeInput').value = ''
+    console.log(`Aqui tenemos la linea 1 \nY esta es la segunda linea`)
   }
 
   const counterCode = () => {
@@ -35,7 +36,7 @@ function App() {
          <br></br>
          <input id="lastNameChangeInput" type="text" placeholder="Last name"/>
          <br></br> 
-         <button onClick={event =>{
+         <button onClick={event =>{ 
           changeName()
           counterCode()
          }}>Change</button>
