@@ -18,7 +18,8 @@ function App() {
     setLastName(newLastName)
     document.getElementById('nameChangeInput').value = ''
     document.getElementById('lastNameChangeInput').value = ''
-    console.log(`Aqui tenemos la linea 1 \nY esta es la segunda linea`)
+    // console.log(`Aqui tenemos la linea 1 \nY esta es la segunda linea`)
+    // console.log("Aqui tenemos la lineaa 1 y con \\n Hacemos cambio a la segunda")
   }
 
   const counterCode = () => {
