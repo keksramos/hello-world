@@ -1,8 +1,8 @@
 import React from 'react';
 
-import logo from './flower.svg';
-import './App.css';
-import Box from './Box';
+import logo from '../../flower.svg';
+import './app.css';
+import Box from '../Box/Box';
 import { useState } from 'react';
 
 function App() {
