@@ -1,5 +1,5 @@
 import React from "react";
-import "./box.css";
+import "./Box.css";
 
 function Box (props){
     const { user, grade} = props
