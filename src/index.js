@@ -4,12 +4,14 @@ import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import './pages/home/home.scss'
+// import UsersGrades from './components/UserGrades/usergrades'
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <App />
+    {/* <UsersGrades /> */}
   </React.StrictMode>
 );
 
