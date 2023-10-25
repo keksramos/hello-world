@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useMemo } from "react";
 
 import "./home.scss";
 import Box from "../../components/Box/Box";
@@ -9,6 +9,16 @@ function Home() {
     const [searchedUser, setSearchedUser] = useState('');
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
 
+    const averageGrade = () => {
+        const total = usersWithGrades.reduce((acc, user) => {
+            return acc + user.grade;
+        }, 0);
+
+        return total / usersWithGrades.length;
+    }
+
+    const avg = useMemo(() => averageGrade(), [usersWithGrades]);
+
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
     }
@@ -16,6 +26,9 @@ function Home() {
     const addUser = () => {
         const userValue = document.getElementById('user').value;
         const gradeValue = Number(document.getElementById('grade').value);
+
+        document.getElementById('user').value = ''
+        document.getElementById('grade').value = ''
 
         setUsersWithGrades([...usersWithGrades, {
             name: userValue,
@@ -25,6 +38,8 @@ function Home() {
 
     const searchUser = () => {
         const userValue = document.getElementById('suser').value;
+
+        document.getElementById('suser').value = ''
 
         const filteredUsers = usersWithGrades.filter((user) => {
             return user.name === userValue;
@@ -45,12 +60,14 @@ function Home() {
                 <button onClick={addUser}>Add user</button>
             </div>
             <div className="search-box">
-                <input id="suser" type="text" placeholder="user" />
+                <input id="suser" type="text" placeholder="Who are we looking for?" />
                 <button onClick={searchUser}>Search user</button>
                 {
                     searchedUser && <Box name={searchedUser.name} />
                 }
             </div>
+            <br></br>
+            <span> Average grade: {avg} </span>
         </div>
     );
 }

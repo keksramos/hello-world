@@ -1,7 +1,6 @@
 import React, {createContext, useState} from 'react';
 
-
-
+import logo from '../../logo.svg';
 import './App';
 import Box from '../Box/Box';
 import Home from '../../pages/home';
