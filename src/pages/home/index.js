@@ -7,7 +7,6 @@ import { GradesContext } from "../../components/App/App";
 
 function Home() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
-    const [isDarkThemeBox, setDarkThemeBox] = useState(false);
     const [searchedUser, setSearchedUser] = useState('');
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
 
@@ -25,7 +24,6 @@ function Home() {
 
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
-        setDarkThemeBox(!isDarkThemeBox)
     }
 
     const addUser = () => {
@@ -72,7 +70,7 @@ function Home() {
                 <br></br>
                 <span> Average grade: {avg} </span>
                 {
-                    searchedUser && <Box name={searchedUser.name} />
+                    searchedUser && <Box  name={searchedUser.name} />
                 }
             </div>
             

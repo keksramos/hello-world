@@ -11,7 +11,7 @@ function Box(props) {
         return user.name === name;
     })[0];
 
-    const toggleTheme = () => {
+    const toggleThemeBox = () => {
         setIsDarkTheme(!isDarkTheme);
     }
 
