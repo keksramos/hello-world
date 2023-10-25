@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./box.css";
+import "./box.scss";
 import { GradesContext } from "../App/App";
 
 function Box(props) {

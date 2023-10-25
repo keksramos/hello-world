@@ -1,6 +1,7 @@
 import React, { useContext, useState, useMemo } from "react";
 
 import "./home.scss";
+import "../../components/Box/box.scss"
 import Box from "../../components/Box/Box";
 import { GradesContext } from "../../components/App/App";
 
@@ -14,7 +15,9 @@ function Home() {
             return acc + user.grade;
         }, 0);
 
-        return total / usersWithGrades.length;
+        const result= total / usersWithGrades.length;
+
+        return result.toFixed(2)
     }
 
     const avg = useMemo(() => averageGrade(), [usersWithGrades]);
@@ -58,6 +61,8 @@ function Home() {
                 <input id="user" type="text" placeholder="User" />
                 <input id="grade" type="number" placeholder="Grade" />
                 <button onClick={addUser}>Add user</button>
+
+                
             </div>
             <div className="search-box">
                 <input id="suser" type="text" placeholder="Who are we looking for?" />
@@ -68,6 +73,7 @@ function Home() {
             </div>
             <br></br>
             <span> Average grade: {avg} </span>
+            
         </div>
     );
 }

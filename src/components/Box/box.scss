@@ -1,0 +1,38 @@
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #b7bbbe;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #68707f;
+
+$background-color-dark: rgba(255,105,180);
+$background-color-light: #f7a7de;
+
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+    min-height: 90%;
+    margin: 5px;
+    border-radius: 15px;
+    animation: bounce 1s infinite alternate;
+
+    &.dark-theme {
+        background-color: $background-color-dark;
+        color: $gray-100;
+    }
+    
+    // y tiene el tema light
+    &.light-theme {
+        background-color: $background-color-light;
+        color: $gray-600;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: auto;
+    }
+}
