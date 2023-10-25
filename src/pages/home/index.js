@@ -1,7 +1,7 @@
 import React, { useContext, useState, useMemo } from "react";
 
 import "./home.scss";
-import "../../components/Box/box.scss"
+import "../../components/Box/box.css"
 import Box from "../../components/Box/Box";
 import { GradesContext } from "../../components/App/App";
 
@@ -67,12 +67,12 @@ function Home() {
             <div className="search-box">
                 <input id="suser" type="text" placeholder="Who are we looking for?" />
                 <button onClick={searchUser}>Search user</button>
+                <br></br>
+                <span> Average grade: {avg} </span>
                 {
                     searchedUser && <Box name={searchedUser.name} />
                 }
             </div>
-            <br></br>
-            <span> Average grade: {avg} </span>
             
         </div>
     );
