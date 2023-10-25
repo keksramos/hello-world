@@ -60,6 +60,7 @@ function Home() {
                 <h1>Home</h1>
                 <button onClick={toggleTheme}>Toggle theme</button>
             </div>
+            <br></br>
             <div className="users">
                 <input id="user" type="text" placeholder="User" />
                 <input id="grade" type="number" placeholder="Grade" />
