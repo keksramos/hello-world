@@ -4,7 +4,10 @@ $gray-300: #b7bbbe;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
 $gray-600: #68707f;
+$hot-pink: rgb(161, 25, 93);
 
+$box-background-color-dark: rgba(255,105,180, 0.5);
+$box-background-color-light: rgba(255, 168, 211, 0.801);
 $background-color-dark: #282c34;
 $background-color-light: #f8f9fa;
 
@@ -17,16 +20,48 @@ $background-color-light: #f8f9fa;
     display: flex;
     flex-direction: column;
 
+    .box__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        width: 90%;
+        min-height: 30%;
+        margin: 5px;
+        border-radius: 15px;
+        border: 1px solid #282c34;
+        animation: bounce 1s infinite alternate;
+
+        p{
+            font-size: 2rem;
+            margin: auto;
+        }
+    }
+
     // y tiene el tema dark
     &.dark-theme {
         background-color: $background-color-dark;
         color: $background-color-light;
-    }
+        
+        // .box__contianer{
+            // border: 1px solid white;
+        // }
+            // &.box__container.dark-theme {
+            //     background-color: $box-background-color-dark;
+            //     color: $gray-100;
+            // }
+            
+        }
     
     // y tiene el tema light
     &.light-theme {
         background-color: $background-color-light;
         color: $background-color-dark;
+        
+        // &.box__container {
+        //     background-color: $box-background-color-light;
+        //     color: $hot-pink;
+        // }
     }
 
     h1 {

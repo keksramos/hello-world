@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "./box.scss";
+import "../../pages/home/home.scss";
 import { GradesContext } from "../App/App";
 
 function Box(props) {
@@ -15,15 +15,26 @@ function Box(props) {
         return user.name === name;
     })[0];
 
-    return <div className={`box ${isDarkThemeBox ? 'dark-theme' : 'light-theme'}`}>
+    return <div className='box__container' >
         <p>{user.name}</p>
         <p> | </p>
         <p>{user.grade}</p>
 
-        <button onClick={event => {
+        {/* <button onClick={event => {
                     toggleTheme()
-                    }}>Toggle theme</button>
+                    }}>Toggle theme</button> */}
     </div>;
 }
 
 export default Box;
+
+
+// return <div className={`box ${isDarkThemeBox ? 'dark-theme' : 'light-theme'}`}>
+// <p>{user.name}</p>
+// <p> | </p>
+// <p>{user.grade}</p>
+
+// <button onClick={event => {
+//             toggleTheme()
+//             }}>Toggle theme</button>
+// </div>;
