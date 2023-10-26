@@ -3,7 +3,7 @@ import "./box.scss";
 import { GradesContext } from "../App/App";
 
 function Box(props) {
-    const [isDarkThemeBox, setIsDarkTheme] = useState(false);
+    const [isDarkThemeBox, setIsDarkTheme] = useState(true);
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
     const {name} = props;
 

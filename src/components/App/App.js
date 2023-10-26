@@ -4,6 +4,7 @@ import logo from '../../logo.svg';
 import './App';
 import Box from '../Box/Box';
 import Home from '../../pages/home';
+import Episodes from '../../pages/episodes';
 
 export const GradesContext = React.createContext()
 
@@ -29,14 +30,36 @@ function App() {
     {
       name: 'Julieta',
       grade: 9.5,
+    },
+    {
+      name: 'Iñigo',
+      grade: 9.3,
+    },
+    {
+      name: 'Julio',
+      grade:7.5,
+    },
+    {
+      name: 'Miguel',
+      grade: 9.5,
     }
   ])
 
+  const [activePage, setActivePage] = useState('episodes')
+  // const [activePage, setActivePage] = useState('home')
+
   return(
   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
-    <Home />
+    {
+      activePage === 'home' ? <Home /> : <Episodes/>
+    }
     </GradesContext.Provider>
     )
+    // return(
+    //   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
+    //     <Home />
+    //     </GradesContext.Provider>
+    //     )
 }
 
 export default App;
