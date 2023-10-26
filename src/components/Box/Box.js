@@ -16,9 +16,9 @@ function Box(props) {
     }
 
     return <div className={`box ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
-        <h1>{user.name}</h1>
-        <h1> | </h1>
-        <h1>{user.grade}</h1>
+        <p>{user.name}</p>
+        <p> | </p>
+        <p>{user.grade}</p>
     </div>;
 }
 

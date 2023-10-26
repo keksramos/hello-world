@@ -33,5 +33,16 @@ $background-color-light: #f8f9fa;
         font-size: 3rem;
         margin: auto;
     }
+
+    button{
+        background-color: hotpink;
+        border: 1px solid var(--accent);
+        color: #fff;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+    }
 }
 
