@@ -26,8 +26,11 @@ function Home() {
 
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
-        setIsDarkThemeBox(!isDarkThemeBox)
     }
+    
+    // const themeChange = () => {
+    //     setIsDarkThemeBox(!isDarkThemeBox)
+    // }
 
     const addUser = () => {
         const userValue = document.getElementById('user').value;
@@ -58,7 +61,10 @@ function Home() {
         <div className={`home ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
             <div className="">
                 <h1>Home</h1>
-                <button onClick={toggleTheme}>Toggle theme</button>
+                <button onClick={event => {
+                    toggleTheme()
+                    // themeChange()
+                    }}>Toggle theme</button>
             </div>
             <br></br>
             <div className="users">
