@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Episode(props) {
-    const {name, air_date, episode, cover_img} = props;
+    const {name, air_date, episode, cover_img} = props.episode;
     return (
         <div className="episode">
             <img src={cover_img} alt={name} width={300}/>

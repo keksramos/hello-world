@@ -1,5 +1,6 @@
 import React from "react";
 import Episode from "../Episode/Episode";
+import '../EpisodeBrowser/episodebrowser.css'
 
 export default function EpisodeBrowser(props) {
     const {episodes} = props;
@@ -24,7 +25,7 @@ export default function EpisodeBrowser(props) {
 
     return (
         <React.Fragment>
-            <Episode {...episodes[activeEpisode]}/>
+            <Episode episode={episodes[activeEpisode]}/>
             <button onClick={prevEpisode}>Prev</button>
             <button onClick={nextEpisode}>Next</button>
         </React.Fragment>

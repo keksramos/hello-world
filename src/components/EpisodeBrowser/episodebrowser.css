@@ -1,0 +1,10 @@
+button{
+    margin: 5px;
+    border: 0px solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
