@@ -2,11 +2,12 @@ import React, { useContext, useState, useMemo } from "react";
 
 import "./home.scss";
 import Box from "../../components/Box/Box";
+import "../../components/Box/box.scss"
 import { GradesContext } from "../../components/App/App";
 
 function Home() {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
-    // const [isDarkThemeBox, setIsDarkThemeBox] = useState(false);
+    const [isDarkThemeBox, setIsDarkThemeBox] = useState(false);
 
     const [searchedUser, setSearchedUser] = useState('');
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
@@ -27,7 +28,7 @@ function Home() {
 
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
-        // setIsDarkThemeBox(!isDarkThemeBox);
+        setIsDarkThemeBox(!isDarkThemeBox);
     }
     
 

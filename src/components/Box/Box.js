@@ -7,6 +7,10 @@ function Box(props) {
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
     const {name} = props;
 
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkThemeBox);
+    }
+
     const user = usersWithGrades.filter((user) => {
         return user.name === name;
     })[0];
@@ -15,6 +19,10 @@ function Box(props) {
         <p>{user.name}</p>
         <p> | </p>
         <p>{user.grade}</p>
+
+        <button onClick={event => {
+                    toggleTheme()
+                    }}>Toggle theme</button>
     </div>;
 }
 
