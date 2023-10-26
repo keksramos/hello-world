@@ -3,7 +3,7 @@ import "./box.scss";
 import { GradesContext } from "../App/App";
 
 function Box(props) {
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [isDarkThemeBox, setIsDarkTheme] = useState(false);
     const {usersWithGrades, setUsersWithGrades} = useContext(GradesContext);
     const {name} = props;
 
@@ -11,11 +11,7 @@ function Box(props) {
         return user.name === name;
     })[0];
 
-    const toggleThemeBox = () => {
-        setIsDarkTheme(!isDarkTheme);
-    }
-
-    return <div className={`box ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
+    return <div className={`box ${isDarkThemeBox ? 'dark-theme' : 'light-theme'}`}>
         <p>{user.name}</p>
         <p> | </p>
         <p>{user.grade}</p>

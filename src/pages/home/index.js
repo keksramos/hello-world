@@ -1,7 +1,6 @@
 import React, { useContext, useState, useMemo } from "react";
 
 import "./home.scss";
-import "../../components/Box/box.scss"
 import Box from "../../components/Box/Box";
 import { GradesContext } from "../../components/App/App";
 
@@ -26,11 +25,9 @@ function Home() {
 
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
+        setIsDarkThemeBox(!isDarkThemeBox);
     }
     
-    // const themeChange = () => {
-    //     setIsDarkThemeBox(!isDarkThemeBox)
-    // }
 
     const addUser = () => {
         const userValue = document.getElementById('user').value;
@@ -63,7 +60,6 @@ function Home() {
                 <h1>Home</h1>
                 <button onClick={event => {
                     toggleTheme()
-                    // themeChange()
                     }}>Toggle theme</button>
             </div>
             <br></br>
@@ -71,18 +67,18 @@ function Home() {
                 <input id="user" type="text" placeholder="User" />
                 <input id="grade" type="number" placeholder="Grade" />
                 <button onClick={addUser}>Add user</button>
-
+            <br></br>
                 
             </div>
             <div className="search-box">
                 <input id="suser" type="text" placeholder="Who are we looking for?" />
                 <button onClick={searchUser}>Search user</button>
                 <br></br>
-                <br></br>
                 <span> <b>Average grade:</b> {avg} </span>
                 {
                     searchedUser && <Box  name={searchedUser.name} />
                 }
+            
             </div>
             
         </div>

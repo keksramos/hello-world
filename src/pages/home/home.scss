@@ -35,14 +35,18 @@ $background-color-light: #f8f9fa;
     }
 
     button{
-        background-color: hotpink;
-        border: 1px solid var(--accent);
+        background-color: rgb(153, 82, 118);
+        border: 0px;
         color: #fff;
+        margin-right: 10px;
         margin: 5px 0;
         padding: 10px;
         border-radius: 10px;
         font-weight: 600;
+        display: flex;
+        flex-direction: column;
         cursor: pointer;
     }
 }
+
 

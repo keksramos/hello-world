@@ -1,8 +1,8 @@
 $gray-100: #f8f9fa;
 $hot-pink: rgb(161, 25, 93);
 
-$background-color-dark: rgba(255,105,180, 0.5);
-$background-color-light: rgba(255, 168, 211, 0.801);
+$box-background-color-dark: rgba(255,105,180, 0.5);
+$box-background-color-light: rgba(255, 168, 211, 0.801);
 
 .box {
     display: flex;
@@ -16,12 +16,12 @@ $background-color-light: rgba(255, 168, 211, 0.801);
     animation: bounce 1s infinite alternate;
 
     &.dark-theme {
-        background-color: $background-color-dark;
+        background-color: $box-background-color-dark;
         color: $gray-100;
     }
     
     &.light-theme {
-        background-color: $background-color-light;
+        background-color: $box-background-color-light;
         color: $hot-pink;
     }
 
