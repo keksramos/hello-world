@@ -20,21 +20,9 @@ function Box(props) {
         <p> | </p>
         <p>{user.grade}</p>
 
-        {/* <button onClick={event => {
-                    toggleTheme()
-                    }}>Toggle theme</button> */}
     </div>;
 }
 
 export default Box;
 
 
-// return <div className={`box ${isDarkThemeBox ? 'dark-theme' : 'light-theme'}`}>
-// <p>{user.name}</p>
-// <p> | </p>
-// <p>{user.grade}</p>
-
-// <button onClick={event => {
-//             toggleTheme()
-//             }}>Toggle theme</button>
-// </div>;
