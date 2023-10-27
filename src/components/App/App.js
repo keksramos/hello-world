@@ -48,21 +48,21 @@ function App() {
   const [activePage, setActivePage] = useState('episodes')
   // const [activePage, setActivePage] = useState('home')
 
-  // return(
-  // <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
-  //   {
-  //     activePage === 'home' ? <Home /> : <Episodes/>
-  //   }
-  //   </GradesContext.Provider>
-  //   )
+  return(
+  <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
+    {
+      activePage === 'home' ? <Home /> : <Episodes/>
+    }
+    </GradesContext.Provider>
+    )
 
   
     // codigo de tarea
-    return(
-      <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
-        <Home />
-        </GradesContext.Provider>
-        )
+    // return(
+    //   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
+    //     <Home />
+    //     </GradesContext.Provider>
+    //     )
 }
 
 export default App;
