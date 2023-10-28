@@ -46,7 +46,7 @@ function App() {
     }
   ])
 
-  const [activePage, setActivePage] = useState('pokemones')
+  const [activePage, setActivePage] = useState('episodes')
 
   return(
   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
