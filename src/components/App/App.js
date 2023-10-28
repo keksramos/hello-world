@@ -51,7 +51,7 @@ function App() {
   return(
   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
     {
-      activePage === 'home' ? <Home /> : <Pokemones/>
+      activePage === 'home' ? <Home /> : <Episodes/>
     }
     </GradesContext.Provider>
     )
