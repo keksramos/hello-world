@@ -1,0 +1,98 @@
+.pokemon {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    .name{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .pokedex{
+        background-color: rgb(227, 101, 101);
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+
+    p{
+        display: inline;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    .fire{
+        background-color: red;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+
+    .poison{
+        background-color: purple;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .grass{
+        background-color: green;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .water{
+        background-color: blue;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .bug{
+        background-color: greenyellow;
+        color: green;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .flying{
+        background-color: cyan;
+        color: black;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .normal{
+        background-color: grey;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .electric{
+        background-color: yellow;
+        color: black;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .ground{
+        background-color: brown;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .fairy{
+        background-color: pink;
+        color: black;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+    .fighting{
+        background-color: rgb(203, 82, 82);
+        color: white;
+        padding: 2px 12px;
+        border-radius: 3px;
+    }
+}

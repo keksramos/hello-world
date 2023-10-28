@@ -5,6 +5,7 @@ import './App';
 import Box from '../Box/Box';
 import Home from '../../pages/home';
 import Episodes from '../../pages/episodes';
+import Pokemones from '../../pages/pokemones';
 
 export const GradesContext = React.createContext()
 
@@ -45,18 +46,16 @@ function App() {
     }
   ])
 
-  const [activePage, setActivePage] = useState('episodes')
-  // const [activePage, setActivePage] = useState('home')
+  const [activePage, setActivePage] = useState('pokemones')
 
   return(
   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
     {
-      activePage === 'home' ? <Home /> : <Episodes/>
+      activePage === 'home' ? <Home /> : <Pokemones/>
     }
     </GradesContext.Provider>
     )
 
-  
     // codigo de tarea
     // return(
     //   <GradesContext.Provider value = {{usersWithGrades, setUsersWithGrades}}>
