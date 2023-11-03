@@ -1,0 +1,51 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #111421;
+    width: 100vw;
+    height: 60px;
+    color: #fefefe;
+    align-items: center;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 32px;
+        width: 100%;
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .webName{
+            font-family: 'Ms Madi', cursive;
+            font-size: 45px;
+            padding: 10px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+    
+            a {
+                text-decoration: none;
+                color: #fefefe;
+                padding-right: 8px;
+            }
+
+            a:hover{
+                color:hotpink;
+            }
+    
+            a:last-of-type {
+                padding-right: 0px;
+            }
+        }
+    }
+}
